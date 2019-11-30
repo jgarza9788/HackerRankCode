@@ -1,6 +1,11 @@
 # The Minion Game
 # https://www.hackerrank.com/challenges/the-minion-game/problem
 
+"""
+this one fails mainly due to time limit...
+but it's a good way to keep track of each *word and *word count
+"""
+
 scores = {}
 scores['kevinScore'] = 0
 scores['stuartScore'] = 0
