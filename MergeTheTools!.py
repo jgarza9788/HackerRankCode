@@ -1,6 +1,7 @@
+#Merge the Tools!
+#https://www.hackerrank.com/challenges/merge-the-tools/forum
 
 
-# print('AABCAAADA'[0:][:3])
 
 def merge_the_tools0(string, k):
     i = 0 
