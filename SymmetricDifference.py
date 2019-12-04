@@ -1,9 +1,9 @@
 #Symmetric Difference
 #https://www.hackerrank.com/challenges/symmetric-difference/problem?h_r=next-challenge&h_v=zen
 
-# NM = int(input())
+NM = int(input())
 LM = set(map(int,input().split()))
-# NN = int(input())
+NN = int(input())
 LN = set(map(int,input().split()))
 
 # print(LM)
