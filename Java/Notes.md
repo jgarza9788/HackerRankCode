@@ -184,3 +184,184 @@ public class Solution {
 }
 
 ```
+
+## 
+```java
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        int l = sc.nextInt();
+        sc.nextLine();
+        // // debugging
+        // System.out.println(l);
+        
+        for (int i = 0;i<l;i++)
+        {
+            // System.out.println(i);
+            
+            String N = sc.nextLine();
+            // System.out.println(N);
+            
+            int count = 0;
+            boolean couldByte = false;
+            boolean couldShort = false;
+            boolean couldInt = false;
+            boolean couldLong = false;
+                        
+            try {
+                byte b = Byte.parseByte(N);
+                count += 1;
+                couldByte = true;
+                // System.out.println("* byte");
+            }
+            catch(Exception e) {
+                //do nothing
+            }
+            
+            try {
+                short b = Short.parseShort(N);
+                count += 1;
+                couldShort = true;
+                // System.out.println("* short");
+            }
+            catch(Exception e) {
+                //do nothing
+            }
+            
+            try {
+                int b = Integer.parseInt(N);
+                count += 1;
+                couldInt = true;
+                // System.out.println("* int");
+            }
+            catch(Exception e) {
+                //do nothing
+            }
+            
+            try {
+                long b = Long.parseLong(N);
+                count += 1;
+                couldLong = true;
+                // System.out.println("* long");
+            }
+            catch(Exception e) {
+                //do nothing
+            }
+            
+            if (count > 0)
+            {
+                System.out.println(N + " can be fitted in:");
+                
+                if (couldByte)
+                {
+                    System.out.println("* byte");
+                }
+                
+                if (couldShort)
+                {
+                    System.out.println("* short");
+                }
+                
+                if (couldInt)
+                {
+                    System.out.println("* int");
+                }
+                
+                if (couldLong)
+                {
+                    System.out.println("* long");
+                }
+                
+            }
+            else
+            {
+                System.out.println(N + " can't be fitted anywhere.");    
+            }
+            
+            
+            
+        }
+        
+    }
+}
+```
+
+## 
+```java
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        Scanner in=new Scanner(System.in);
+        String a;
+        int i=1;
+        while(in.hasNext())
+            {
+            a=in.nextLine();
+            System.out.println(i+" "+a);
+            i++;
+        }
+        
+    }
+}
+```
+
+## 
+```java
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        int B = sc.nextInt();
+        int H = sc.nextInt();
+        
+        if (B > 0 & H > 0)
+        {
+            System.out.println(B*H);
+        }
+        else
+        {
+            System.out.println("java.lang.Exception: Breadth and height must be positive");
+        }
+
+    }
+}
+```
+
+## 
+```java
+
+```
+
+
+## 
+```java
+
+```
+
+## 
+```java
+
+```
+
+## 
+```java
+
+```
+
+## 
+```java
+
+```
