@@ -342,17 +342,125 @@ public class Solution {
 
 ## 
 ```java
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        String s = Integer.toString(n);
+        System.out.println("Good job");
+    }
+}
 
 ```
 
 
+
+
 ## 
 ```java
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+
+import java.util.Calendar;
+// import java.time.DayOfWeek;
+// import java.time.LocalDate;
+
+class Result {
+
+    /*
+     * Complete the 'findDay' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts following parameters:
+     *  1. INTEGER month
+     *  2. INTEGER day
+     *  3. INTEGER year
+     */
+
+    
+
+    public static String findDay(int month, int day, int year) {
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.MONTH, month-1);
+        cal.set(Calendar.DAY_OF_MONTH, day);
+        cal.set(Calendar.YEAR, year);
+        return cal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US).toUpperCase();
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        int month = Integer.parseInt(firstMultipleInput[0]);
+
+        int day = Integer.parseInt(firstMultipleInput[1]);
+
+        int year = Integer.parseInt(firstMultipleInput[2]);
+
+        String res = Result.findDay(month, day, year);
+        System.out.println(res);
+
+        bufferedWriter.write(res);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
 
 ```
 
 ## 
 ```java
+import java.io.*;
+import java.util.*;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        // NumberFormat nf = NumberFormat.getInstance();
+        Locale indiaLocale = new Locale("en", "IN");
+        
+        NumberFormat nf_us = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat nf_india = NumberFormat.getCurrencyInstance(indiaLocale);
+        NumberFormat nf_china = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat nf_french = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        
+        Scanner sc = new Scanner(System.in);
+
+        double d = sc.nextDouble();
+
+        System.out.println("US: " + nf_us.format(d));
+        System.out.println("India: " + nf_india.format(d));
+        System.out.println("China: " + nf_china.format(d));
+        System.out.println("France: " + nf_french.format(d));
+    }
+}
 
 ```
 
