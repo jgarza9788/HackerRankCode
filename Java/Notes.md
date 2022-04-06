@@ -467,6 +467,174 @@ public class Solution {
 ## 
 ```java
 
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc = new Scanner(System.in);
+        
+        String a = sc.nextLine();
+        String b = sc.nextLine();
+               
+        
+        System.out.println(a.length() + b.length());
+        
+        if ( a.compareTo(b) > 0 )
+        {
+            System.out.println("Yes");
+        }
+        else
+        {
+            System.out.println("No");
+        }
+        
+        System.out.println( capitalize(a) + " " + capitalize(b));
+    }
+    
+    public static String capitalize(String str) {
+    if(str == null || str.isEmpty()) {
+        return str;
+    }
+
+    return str.substring(0, 1).toUpperCase() + str.substring(1);
+}
+}
+```
+
+## 
+```java
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        
+        Scanner sc = new Scanner(System.in);
+        
+        String s = sc.nextLine();
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+        
+        System.out.println(s.substring(start,end));
+        
+    }
+}
+
+```
+
+## 
+```java
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+
+        Scanner sc = new Scanner(System.in);
+        
+        String s = sc.nextLine();
+        int k = sc.nextInt();
+        
+        // s = "somethingelse";
+        // k = 3;
+        
+        // System.out.println(s.length());
+        // System.out.println(s.length()-4);
+        // System.out.println(s.length()-3);
+        
+        // String[] ss = new String[];
+        ArrayList<String> ss = new ArrayList<String>();
+        for (int i = 0;i <= s.length()-k ;i++)
+        {
+            // System.out.println(i);
+            // System.out.println(k+i);
+            // System.out.println(s.substring(i,k+i));
+            ss.add(s.substring(i,k+i));
+        }
+        
+        // System.out.println(ss);
+        
+        String SL = ss.get(0);
+        String EL = ss.get(0);
+        
+        for(String x: ss)
+        {
+            // System.out.println(x);
+            
+            if (SL.compareTo(x) > 0)
+            {
+                SL = x;
+            }
+            
+            if (EL.compareTo(x) < 0)
+            {
+                EL = x;
+            }
+        }
+        
+        System.out.println(SL + "\n" + EL);
+        // System.out.println(EL);
+
+        
+        // Scanner scan=new Scanner(System.in);
+        // String str=scan.next();
+        // int k=scan.nextInt();
+        // SortedSet<String> sets=new TreeSet<String>();
+        // for(int i=0;i<=str.length()-k;i++)
+        // {
+        //     sets.add(str.substring(i,i+k));
+        // }
+        // System.out.println(sets.first());
+        // System.out.println(sets.last());
+
+    }
+}
+
+```
+
+## 
+```java
+
+```
+
+## 
+```java
+
+```
+
+## 
+```java
+
+```
+
+## 
+```java
+
+```
+
+## 
+```java
+
+```
+
+## 
+```java
+
+```
+
+## 
+```java
+
 ```
 
 ## 
