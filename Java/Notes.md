@@ -642,7 +642,78 @@ public class Solution {
 
 ## 
 ```java
+import java.io.*;
+import java.util.*;
+import org.json.simple.JSONObject;
 
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine().toLowerCase();
+        String b = sc.nextLine().toLowerCase();
+        
+        if (a.length() == b.length())
+        {
+            JSONObject a_obj = analyze_string(a);
+            JSONObject b_obj = analyze_string(b);
+            
+            // System.out.println(a_obj.toString());
+            // System.out.println(b_obj.toString());
+            
+            String a_str = a_obj.toString();
+            String b_str = b_obj.toString();
+            
+            if (a_str.equals(b_str))
+            {
+                System.out.println("Anagrams");
+            }
+            else
+            {
+                System.out.println("Not Anagrams");
+            }
+            
+        }
+        else
+        {
+            System.out.println("Not Anagrams");
+        }
+    }
+    
+    public static JSONObject analyze_string(String s)
+    {
+        JSONObject obj = new JSONObject();
+        
+        // System.out.println(s);
+        for (int i = 0; i <= s.length() -1 ;i++)
+        {
+            String l = s.substring(i,1+i);
+            var v0 = obj.get(l);
+            int v = 0;
+            if (v0 == null)
+            {
+                v = 0;
+            }
+            else
+            {
+                v = (Integer)v0;
+            }
+            
+            obj.put(l,v + 1);
+        }
+        
+        // System.out.println(s);
+        // System.out.println((Integer)obj.get("a"));
+        // System.out.println(obj.toString());
+        
+        return obj;
+    }
+}
 ```
 
 ## 
