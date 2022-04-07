@@ -718,7 +718,46 @@ public class Solution {
 
 ## 
 ```java
+import java.io.*;
+import java.util.*;
+import java.util.regex.Pattern;
 
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        
+        // s = "                        ";
+        s = s.trim().replaceAll("[!,?._'@\\s]+", " ");
+        
+        // System.out.println("|" + s + "|");
+        if (s.isEmpty())
+        {
+            System.out.println(0);
+        }
+        else
+        {
+        
+            // s = "           YES      leading spaces        are valid,    problemsetters are         evillllll".replaceAll("[!,?._'@\\s]+", " ");
+            
+            String REGEX = "\\s+";
+            Pattern pattern = Pattern.compile(REGEX);
+            String[] result = pattern.split(s);
+            
+            System.out.println(result.length);
+            
+            for(String data:result)
+            {
+                System.out.println(data); 
+            }
+        }
+        
+    }
+}
 ```
 
 ## 
